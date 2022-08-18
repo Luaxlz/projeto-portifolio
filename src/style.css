@@ -6,19 +6,21 @@
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    background: #333;
+    background: #f53b57;
+    transition: 0.5s;
 }
 
 .nav-bar {
-    position: relative;
+    position: fixed;
+    align-self: center;
+    float: left;
     width: 70px;
     height: 350px;
     background: #fff;
     border-radius: 35px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    margin-left: 25px;
 }
 
 .nav-bar ul {
@@ -49,7 +51,7 @@ body {
     font-weight: 500;
 }
 
-.nav-bar ul li a .icon {
+.nav-bar ul li a .icone {
     position: relative;
     display: block;
     line-height: 75px;
@@ -57,11 +59,11 @@ body {
     transition: 0.5s;
 }
 
-.nav-bar ul li a .icon i {
+.nav-bar ul li a .icone i {
     font-size: 24px;
 }
 
-.nav-bar ul li a .title {
+.nav-bar ul li a .label {
     position: absolute;
     top: 50%;
     left: 110px;
@@ -75,13 +77,13 @@ body {
     visibility: hidden;
 }
 
-.nav-bar ul li:hover a .title {
+.nav-bar ul li:hover a .label {
     opacity: 1;
     visibility: visible;
     transform: translateX(-25px) translateY(-50%);
 }
 
-.nav-bar ul li a .title::before {
+.nav-bar ul li a .label::before {
     content: '';
     position: absolute;
     width: 12px;
@@ -93,7 +95,7 @@ body {
     border-radius: 2px;
 }
 
-.nav-bar ul .indicator {
+.nav-bar ul .indicador {
     position: absolute;
     left: 0;
     width: 70px;
@@ -101,7 +103,7 @@ body {
     transition: 0.5s;
 }
 
-.nav-bar ul .indicator::before {
+.nav-bar ul .indicador::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -114,10 +116,49 @@ body {
     transition: 0.5s;
 }
 
-.nav-bar ul li.active a .icon {
+.nav-bar ul li.ativo a .icone {
     color: #fff;
 }
 
+.nav-bar ul li:nth-child(1).ativo ~ .indicador {
+    transform: translateY(calc(70px * 0));
+}
+
+.nav-bar ul li:nth-child(2).ativo ~ .indicador {
+    transform: translateY(calc(70px * 1));
+}
+
+.nav-bar ul li:nth-child(3).ativo ~ .indicador {
+    transform: translateY(calc(70px * 2));
+}
+
+.nav-bar ul li:nth-child(4).ativo ~ .indicador {
+    transform: translateY(calc(70px * 3));
+}
+
+.nav-bar ul li:nth-child(5).ativo ~ .indicador {
+    transform: translateY(calc(70px * 4));
+}
+
+.nav-bar ul li:nth-child(1).ativo ~ .indicador::before {
+    background: #f53b57;
+}
+
+.nav-bar ul li:nth-child(2).ativo ~ .indicador::before {
+    background: #3c40c6;
+}
+
+.nav-bar ul li:nth-child(3).ativo ~ .indicador::before {
+    background: #05c46b;
+}
+
+.nav-bar ul li:nth-child(4).ativo ~ .indicador::before {
+    background: #0fbcf9;
+}
+
+.nav-bar ul li:nth-child(5).ativo ~ .indicador::before {
+    background: #ffa801;
+}
 /* #main-page {
     background-color: red;
     display: flex;
