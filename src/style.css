@@ -2,25 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 body {
     display: flex;
-    min-height: 100vh;
-    background: #f53b57;
     transition: 0.5s;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .nav-bar {
     position: fixed;
-    align-self: center;
+    top: 20%;
     float: left;
     width: 70px;
     height: 350px;
-    background: #fff;
+    background-color: transparent;
     border-radius: 35px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
     margin-left: 25px;
+    z-index: 100;
 }
 
 .nav-bar ul {
@@ -47,7 +52,7 @@ body {
     align-items: center;
     width: 100%;
     text-align: center;
-    color: #333;
+    color: #797B84;
     font-weight: 500;
 }
 
@@ -145,50 +150,172 @@ body {
 }
 
 .nav-bar ul li:nth-child(2).ativo ~ .indicador::before {
-    background: #3c40c6;
+    background: #f53b57;
 }
 
 .nav-bar ul li:nth-child(3).ativo ~ .indicador::before {
-    background: #05c46b;
+    background: #f53b57;
 }
 
 .nav-bar ul li:nth-child(4).ativo ~ .indicador::before {
-    background: #0fbcf9;
+    background: #f53b57;
 }
 
 .nav-bar ul li:nth-child(5).ativo ~ .indicador::before {
-    background: #ffa801;
+    background: #f53b57;
 }
-/* #main-page {
-    background-color: red;
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+#main-page {
+    background-color: #EDD2E0;
     display: flex;
     width: 100vw;
     height: 650px;
 }
+
+#hero-foto {
+    position: absolute;
+    left: 30%;
+    top: 51%;
+    background-color: #333;
+    width: 300px;
+    height: 300px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-image: url(./images/perfil.jpg);
+    background-size: cover;
+
+}
+
+#conteudo {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    font-size: 2em;
+    color: #648FAF;
+    transform: translateY(-50%);
+}
+
+#conteudo h1 {
+    margin: 35px 0px 10px;
+    font-size:2.7em;
+    color: #15C6A6;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#conteudo>span {
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+#conteudo .subtitulo {
+    font-size: 0.8em;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.full {
+    color: #f34336;
+}
+
+.social {
+    position: absolute;
+    /* background-color: #ffa801; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    left: 20%;
+    width: 250px;
+}
+
+a > i {
+    color: #797B84;
+}
+
+.botao-curriculo {
+    width: 85px;
+    height: 31px;
+    border-radius: 18px;
+    border: none;
+    background-color: #648FAF;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.botao-curriculo a {
+    color: #333;
+}
+
+button:focus {
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
 #about-me {
-    background-color: blue;
     display: flex;
+    flex-direction: column;
+    background-color: #333;
     width: 100vw;
-    height: 600px;
+    height: 650px;
+    padding: 75px 0px;
 }
 
-#skills {
-    background-color: rosybrown;
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
     display: flex;
-    width: 100vw;
-    height: 600px;
+    align-items: center;
+    justify-content: space-around;
+
 }
 
-#projects {
-    background-color: burlywood;
-    display: flex;
-    width: 100vw;
-    height: 600px;
+#about-me img {
+    height: auto;
+    width: 450px;
+    opacity: 0.7;
+    border: solid 2px #333;
+    border-radius: 6%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#contact {
-    background-color: pink;
-    display: flex;
-    width: 100vw;
-    height: 600px;
-} */
+.texto-sobre {
+    width: 550px;
+}
+
+.texto-sobre h2 {
+   color: #fff;
+   font-size: 4.2em;
+   text-transform: capitalize;
+   margin-bottom: 20px;
+}
+
+.texto-sobre h5 {
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+ }
+
+ .texto-sobre p {
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 0.9em;
+    margin-bottom: 45px;
+ }
