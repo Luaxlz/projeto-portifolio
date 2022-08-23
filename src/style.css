@@ -171,7 +171,7 @@ a {
 }
 
 #main-page {
-    background-color: #EDD2E0;
+    background-color: #3A517B;
     display: flex;
     width: 100vw;
     height: 650px;
@@ -181,14 +181,19 @@ a {
     position: absolute;
     left: 30%;
     top: 51%;
-    background-color: #333;
+    border: solid 1px #3A517B;
     width: 300px;
     height: 300px;
     transform: translateY(-50%);
     border-radius: 50%;
+    /* opacity: 0.9; */
     background-image: url(./images/perfil.jpg);
     background-size: cover;
 
+}
+
+#hero-foto:hover {
+    opacity: 0.7;
 }
 
 #conteudo {
@@ -196,14 +201,15 @@ a {
     top: 50%;
     left: 55%;
     font-size: 2em;
-    color: #648FAF;
+    color: #56BABD;
     transform: translateY(-50%);
+    cursor: default;
 }
 
 #conteudo h1 {
     margin: 35px 0px 10px;
     font-size:2.7em;
-    color: #15C6A6;
+    color: #F34336;
     text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -235,7 +241,7 @@ a {
 }
 
 a > i {
-    color: #797B84;
+    color: #d9d9d9;
 }
 
 .botao-curriculo {
@@ -243,7 +249,7 @@ a > i {
     height: 31px;
     border-radius: 18px;
     border: none;
-    background-color: #648FAF;
+    background-color: #f2f2f2;
     cursor: pointer;
     text-align: center;
     font-weight: 600;
@@ -293,6 +299,10 @@ button:active {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+#about-me img:hover {
+    opacity: 0.9;
+}
+
 .texto-sobre {
     width: 550px;
 }
@@ -319,3 +329,95 @@ button:active {
     font-size: 0.9em;
     margin-bottom: 45px;
  }
+
+ #skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A517B;
+    width: 100vw;
+    height: 650px;
+    padding: 75px 0px;
+}
+
+.conteudo-habilidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.html-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 45vw;
+    margin: 25px;
+}
+
+.titulo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.barra-progresso {
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#progresso-html {
+    width: 68%;
+    background-color: #f34336;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#progresso-css {
+    width: 57%;
+    background-color: #f34336;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#progresso-javascript {
+    width: 42%;
+    background-color: #f34336;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#progresso-jquery {
+    width: 38%;
+    background-color: #f34336;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#progresso-docker {
+    width: 5%;
+    background-color: #f34336;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#projetos {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    width: 100vw;
+    height: 650px;
+    padding: 75px 0px;
+}
+
+#contato {
+    display: flex;
+    background-color: #3A517B;
+    width: 100vw;
+    height: 450px;
+    padding: 75px 0px;
+}
