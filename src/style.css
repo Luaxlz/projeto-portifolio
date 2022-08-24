@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -407,12 +409,94 @@ button:active {
 
 #projetos {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #333;
-    width: 100vw;
+    min-width: 100vw;
     height: 650px;
-    padding: 75px 0px;
 }
+
+.grid {
+    display: grid;
+    width: 45rem;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+    align-items: start;
+}
+
+.grid-item {
+    background-color: #fff;
+    height: 30rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-header {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #0d0d0d;
+    /* margin-bottom: 1rem; */
+}
+
+.card-text {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: #3d3d3d;
+    margin-bottom: 0.8rem;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #3363ff;
+    background-color: #d8e0fd;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+    margin-left: 1rem;
+    transition: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active {
+    background-color: #c2cffc;
+}
+
+.card-btn:hover span,
+.card-btn:active span {
+    margin-left: 1.5rem;
+}
+
+
 
 #contato {
     display: flex;
@@ -420,4 +504,15 @@ button:active {
     width: 100vw;
     height: 450px;
     padding: 75px 0px;
+}
+
+
+@media only screen and (max-width: 840px) {
+    #projetos{
+        background-color: yellow;
+    }
+
+    .grid {
+        
+    }
 }
